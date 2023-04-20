@@ -19,7 +19,7 @@ createApp({
             const data = {
                 newTask: this.addTask
             };
-    
+
             axios.post('server.php', data, 
             {
                 headers: {'Content-Type': 'multipart/form-data'}
@@ -29,6 +29,18 @@ createApp({
                 this.addTask = '';
             });
         }
+    },
+    changeState(arrayIndex) {
+        const newState = this.toDoList[arrayIndex].state == 'done' ? 'undone':'done';
+        this.toDoList[arrayIndex].state = newState 
+        const data = {
+            updateTask: newState,
+            listIndex: arrayIndex
+        }
+        axios.post('server.php', data, 
+        {
+            headers: {'Content-Type': 'multipart/form-data'}
+        });
     }
     },
     mounted() {

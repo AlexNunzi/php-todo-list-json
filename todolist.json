@@ -1,1 +1,1 @@
-["Fare la spesa","Andare dal dentista","Stendere i panni","Preparare la cena"]
+[{"text":"Fare la spesa","state":"done"},{"text":"Andare dal dentista","state":"undone"},{"text":"Stendere i panni","state":"done"},{"text":"Preparare la cena","state":"done"}]

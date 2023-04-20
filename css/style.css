@@ -1,0 +1,8 @@
+:root{
+    --hover-list-item: #F8F9FA;
+}
+
+.ms_task:hover{
+    cursor: pointer;
+    background-color: var(--hover-list-item);
+}
