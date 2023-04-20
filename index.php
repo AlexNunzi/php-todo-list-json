@@ -18,8 +18,8 @@
                     <li v-else v-for="task in toDoList" class="list-group-item"> {{ task }} </li>
                 </ul>
                 <div class="d-flex justify-content-center pt-3 border-top border-dark-subtle">
-                    <input class="me-3" type="text">
-                    <button class="btn btn-primary btn-sm">Aggiungi</button>
+                    <input v-model="addTask" class="me-3" type="text">
+                    <button @click="postNewTask" :disabled="addTask == ''" class="btn btn-primary btn-sm">Aggiungi</button>
                 </div>
             </div>
             
