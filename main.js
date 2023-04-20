@@ -1,9 +1,20 @@
 const { createApp } = Vue
 
 createApp({
-  data() {
+    data() {
     return {
-      message: 'Hello Vue!'
+        toDoList: [],
     }
-  }
+    },
+    methods: {
+    getList() {
+        axios.get('server.php')
+        .then(response => {
+            this.toDoList = response.data;
+        })
+    }
+    },
+    mounted() {
+        this.getList();
+    }
 }).mount('#app')
